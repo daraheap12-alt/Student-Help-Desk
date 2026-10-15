@@ -11,15 +11,15 @@ Offline evaluation only tells part of the story before a system is exposed to re
 * **RAG Chat Application:** Built with Streamlit to provide an interactive student-support assistant backed by a local FAQ dataset.
 * **Automated Evaluation (LLM-as-a-Judge):** Scores generated answers for correctness, groundedness, and relevance against retrieved context after each query.
 * **Request & Cost Tracking:** Captures detailed metadata (`LLMCallRecord`) including token usage, latency, and operational cost.
-* **Database Persistence:** Stores complete chat history, metrics, and user feedback (thumbs up/down) in a PostgreSQL database.
-* **Real-Time Dashboards:** Includes a built-in Streamlit monitoring interface and a fully provisioned Grafana dashboard for visual analytics.
+* **Database Persistence:** Stores complete chat history, metrics, and user feedback (thumbs up/down) in a PostgreSQL database hosted on Neon.
+* **Monitoring & Dashboards:** Uses the Neon Console to monitor the PostgreSQL database, alongside a built-in Streamlit monitoring interface and a Grafana dashboard for application analytics.
 * **Flexible Execution & Deployment:** Fully containerized with Docker Compose for local multi-service orchestration, while also supporting local Python execution and cloud deployment.
 
 ## 🛠️ Tech Stack
 
 * **Frontend & UI:** Streamlit
-* **Database & Storage:** PostgreSQL (Dockerized / container volumes)
-* **Monitoring & Visualization:** Grafana, custom Streamlit dashboard
+* **Database & Storage:** PostgreSQL hosted on Neon
+* **Monitoring & Visualization:** Neon Console (database monitoring), Grafana, custom Streamlit dashboard
 * **Environment & Package Management:** Python, `uv`
 * **Infrastructure:** Docker Compose
 
